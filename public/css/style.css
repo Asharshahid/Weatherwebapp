@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,400;0,500;1,400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Piazzolla', serif;
+}
+
+:root {
+    --main-bg: #1e272e;
+    --main-color: #0097e6;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#menu-btn {
+    display: none;
+}
+
+.logo {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.logo span {
+    margin: 10px;
+    cursor: pointer;
+}
+
+.fa-snowflake {
+    font-size: 2rem;
+    color: var(--main-color);
+    animation: round 2s linear infinite;
+}
+
+@keyframes round {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: var(--main-bg);
+}
+
+header nav ul {
+    display: flex;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 10px;
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    padding: 5px 14px;
+}
+
+header nav ul li a:hover {
+    transition: 1s;
+    color: var(--main-color);
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+@media screen and (max-width:700px) {
+    #menu-btn {
+        display: inline-block;
+        color: #fff;
+        font-size: 3rem;
+        ;
+    }
+    header .navbar {
+        position: absolute;
+        top: 70px;
+        left: -120%;
+        width: 100%;
+        height: 76vh;
+        display: flex;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 0;
+    }
+    header .navbar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    header .navbar ul li {
+        margin: 30px;
+    }
+    header .navbar.active {
+        transition: 1s ease-in;
+        left: 0px;
+    }
+}
+
+
+/* weather $$$$$$$$$$$$$ */
+
+.mainweather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather_Search {
+    margin: 10px;
+    padding: 10px;
+    background-color: var(--main-bg);
+    width: 50%;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.weather_Search div {
+    width: 95%;
+}
+
+.weather_Search input {
+    width: 100%;
+    height: 40px;
+    font-size: 1.5rem;
+    padding-left: 10px;
+    border: none;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+@media screen and (max-width:600px) {
+    .weather_Search {
+        width: 95%;
+    }
+}
+
+.weather_Search a {
+    text-decoration: none;
+    background-color: var(--main-bg);
+    color: #fff;
+    border-radius: 10px;
+    font-size: 2rem;
+    padding: 6px 12px;
+    margin-left: 10px;
+}
+
+.weather_Search a:hover {
+    transition: 1s;
+    background-color: #fff;
+    color: var(--main-color);
+}
+
+.weather_showArea {
+    min-width: 270px;
+    background-color: var(--main-bg);
+    color: #fff;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.showArea_first {
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5rem;
+    background-color: var(--main-color);
+    border-radius: 10px 10px 0 0;
+}
+
+.showArea_first h3 {
+    font-size: 2rem;
+}
+
+.showAreaMain {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3rem;
+}
+
+.showAreaMain p {
+    margin: 0;
+}
+
+.showAreaMain i {
+    font-size: 4rem;
+    margin-top: 1rem;
+}
+
+.showAreaMain h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.showArea_second p {
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 4rem;
+    font-size: 1.5rem;
+}
+
+footer {
+    background-color: var(--main-bg);
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 6rem;
+    margin-top: auto;
+}
+
+
+/* $$$$$$$$$$$$$$$$$ */
+
+.HomeArea {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 4%;
+}
+
+.left_side h3 {
+    font-size: 2rem;
+    margin: 2rem 2rem;
+}
+
+.left_side h1 {
+    font-size: 2.5rem;
+    margin: 1rem 2rem;
+}
+
+.left_side span {
+    color: var(--main-color);
+}
+
+.left_side a {
+    display: inline-block;
+    margin: 2rem;
+    padding: 4px 12px;
+    color: #fff;
+    background-color: var(--main-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 8px 14px;
+    border-radius: 8px;
+}
+
+.right_side {
+    margin: 2rem 0;
+}
+
+.right_side img {
+    width: 400px;
+    height: 250px;
+}
+
+@media screen and (max-width:500px) {
+    .right_side img {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    header {
+        padding: 2rem 0;
+    }
+}
+
+
+/* ID WORKING MAIN  */
+
+#cityPopup {
+    text-transform: capitalize;
+}
+
+.hiddendataArea {
+    opacity: 0;
+}
+
+
+/* ABOUT )))))))))))))))))))) */
+
+.aboutMain {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    margin-top: 5rem;
+}
+
+.aboutMain p {
+    font-size: 2rem;
+    color: var(--main-bg);
+}
+
+.aboutMain h1 {
+    font-size: 3.5rem;
+}
+
+@media screen and (max-width:600px) {
+    .aboutMain p {
+        font-size: 1.1rem;
+    }
+    .aboutMain h1 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .aboutMain p {
+        font-size: 1.1rem;
+    }
+    .aboutMain h1 {
+        font-size: 1.8rem;
+    }
+}
+
+.aboutMain span {
+    color: var(--main-color);
+}
+
+.aboutMain a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 8px 14px;
+    color: white;
+    background-color: var(--main-color);
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+.aboutMain a:hover,
+.left_side a:hover {
+    transition: 1s;
+    padding: 8px 22px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.aboutMain .aboutContant {
+    margin: 10px;
+}

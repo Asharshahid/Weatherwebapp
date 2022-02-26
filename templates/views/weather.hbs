@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>headlink}}
+</head>
+<body>
+    {{>navbar}}
+
+    <div class="mainweather">
+        <div class="weather_Search">
+           <div>
+            <input id="cityName" type="text" placeholder="Enter city name" name="" id="">
+           </div>
+           <a href="" id="submitBtn">Search</a>
+        </div>
+        <div class="weather_showArea">
+            <div class="showArea_first">
+                <h3 id="days">Day</h3>
+                <h3 id="dates">Date</h3>
+            </div>
+            <div class="showArea_second">
+                <p id="cityPopup">Weather Update</p>
+                <div class="showAreaMain hiddendataArea">
+                    <h1 id="temprature">Temp</h1>
+                    <p id="weatherIcon"><i class="fas fa-cloud"></i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{>footer}}
+
+    {{!-- <i class="fas fa-cloud"></i>
+    <i class="fas fa-sun"></i>
+    <i class="fas fa-cloud-rain"></i>
+    <i class="fas fa-smog"></i>
+    <i class="fas fa-cloud-sun"></i>
+    <i class="fas fa-moon"></i> --}}
+
+    <script src="js/main.js"></script>
+</body>
+</html>
